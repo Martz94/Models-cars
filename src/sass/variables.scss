@@ -1,0 +1,30 @@
+// Colors
+
+$color-primary: #0a062d;
+$color-light: #FFFFFF;
+$text-green: #5fffca;
+$color-rose: #ee9fb4;
+$text-dark: rgb(127, 127, 127);
+$color-border: #2c2566;
+$text-black: #000000;
+$color-secondary: #060321;
+
+// Base
+
+$body-background-color: $color-primary;
+$body-color: $color-light;
+
+$body-primary-font: 'Outfit', sans-serif;
+
+$heading-line-height: 1.2;
+$heading-font-weight: 600;
+$heading-font-style: normal;
+$headings-sizes: (
+  "h1": 51px,
+  "h2": 41px,
+  "h3": 26px,
+  "h4": 22px,
+  "h5": 18px,
+  "h6": 14px
+)
+

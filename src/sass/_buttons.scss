@@ -1,0 +1,61 @@
+.button_redes-1{
+    background-color: $color-light;
+    border-radius: 5px;
+    
+
+    &:hover{
+        background-color: $text-dark;
+    }
+
+}
+
+.button_info-a{
+    margin-right: 1rem;
+    &:hover{
+        color: $text-dark;
+    }
+}
+
+
+
+
+
+.button_2{
+    border: 1px solid;
+    border-color: $color-light;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 200;
+    display: flex;
+}
+
+.button-outlined{
+    border: solid 1px $text-green !important;
+    background-color: transparent !important;
+    color: $color-light !important;
+    &:hover{
+        color: $text-black !important;
+        background-color: $text-green !important;
+    }
+}
+
+
+.button_1{
+    border-radius: 10px;
+    background-color: $text-green;
+    color: $text-black;
+    text-align: center;
+    padding: 0.7rem;
+    border: none;
+    font-family: 'Outfit';
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-rose;
+        color: $color-light;
+    }
+}

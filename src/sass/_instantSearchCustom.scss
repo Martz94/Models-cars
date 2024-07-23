@@ -1,0 +1,134 @@
+.ais-RefinementList-list{
+  margin: 0;
+  padding: 0;
+  .ais-RefinementList-item{
+    list-style: none;
+    margin-bottom: 8px;
+    .ais-RefinementList-label{
+      display: flex;
+    }
+    .ais-RefinementList-labelText{
+      display: flex;
+      margin-right: 4px;
+      .itemMark{
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: solid 1px $body-color;
+        box-sizing: border-box;
+        margin-right: 12px;
+        color: transparent;
+      }
+    }
+  }
+  .ais-RefinementList-checkbox{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    visibility: hidden;
+    &:checked ~ .ais-RefinementList-labelText{
+      .itemMark{
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.ais-RefinementList-showMore{
+  color: $body-color;
+  background: transparent;
+  padding: 0;
+  font-size: 14px;
+  border: none;
+  margin: 16px 0;
+}
+
+.ais-RefinementList-showMore--disabled{
+  opacity: .5;
+}
+
+.ais-ClearRefinements-button--disabled{
+  display: none;
+}
+
+.ais-Hits-list{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.ais-Hits-item{
+  list-style: none;
+}
+
+.ais-HitsPerPage-select,
+.ais-SortBy-select{
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  border: solid 1px #2c2566;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  position: relative;
+  text-align: left!important;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 10px 35px 10px 15px;
+  width: 100%;
+  color: $body-color;
+  background: url('../../public/menu-white.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) 50%;
+  appearance: none;
+  background-size: 15px;
+  option{
+    color: #000;
+  }
+}
+
+.ais-Pagination-list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 32px;
+  justify-content: center;
+  li{
+    list-style: none;
+    margin: 0 2px;
+    a, span{
+      font-size: 16px;
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border: solid 1px transparent;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      box-sizing: border-box;
+    }
+    a:hover{
+      border-color: #2c2566;
+      animation: hoverAnimated .5s;
+    }
+  }
+  .ais-Pagination-item--selected{
+    a{
+      border-color:  #2c2566;
+    }
+  }
+}
+
+@keyframes hoverAnimated{
+  from {border-color: #fff;}
+  to {border-color: #2c2566;}
+}

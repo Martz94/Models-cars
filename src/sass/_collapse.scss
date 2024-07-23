@@ -1,0 +1,62 @@
+.collapse{
+  border-bottom: solid 1px $color-border;
+  &-body{
+    display: none;
+  }
+  &-header{
+    padding: 22px 20px 34px 0px;
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    color: $body-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    font-size: unset;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+    cursor: pointer;
+    &-icon{
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 10px;
+        background: $body-color;
+        top: 50%;
+        margin-top: -1px;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 2px;
+        background: $body-color;
+        left: 50%;
+        margin-left: -1px;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+  }
+}
+
+.collapse.open{
+  .collapse-header{
+    &-icon{
+      &::before{
+        opacity: 0;
+      }
+    }
+  }
+  .collapse-body{
+    display: block;
+  }
+}

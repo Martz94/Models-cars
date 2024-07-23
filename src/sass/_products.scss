@@ -1,0 +1,131 @@
+.products{
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  & > div:nth-child(1) {
+    grid-row: 1;
+    border-bottom: solid 1px #2c2566;
+    padding: 14px 0;
+  }
+  & > div:nth-child(2) {
+    grid-row: 1;
+    border-bottom: solid 1px #2c2566;
+    border-left: solid 1px #2c2566;
+    padding: 14px 0 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    > div{
+      display: flex;
+      align-items: center;
+    }
+  }
+  & > div:nth-child(3) {
+    grid-row: 2;
+  }
+  & > div:nth-child(4) {
+    grid-row: 2;
+    border-left: solid 1px #2c2566;
+    padding: 22px 0 22px 22px;
+  }
+}
+
+.card-product{
+  padding: 100px 15px 15px;
+  border: solid 1px #2c2566;
+  border-radius: 22px;
+  position: relative;
+  margin-top: 80px;
+  background: #0a062d;
+  color: #FFFFFF;
+  transition: all .3s;
+  &:hover{
+    background: #FFFFFF;
+    color: #000000;
+    transition: all .3s;
+  }
+}
+
+.card-product:hover .cube-container{
+  filter: brightness(1.3);
+  transition: all .3s;
+}
+
+.card-product-title{
+  margin: 15px 0px 20px;
+}
+
+.card-product-price{
+  font-weight: 500;
+  display: flex;
+  span{
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}
+
+.card-product-tag{
+  margin: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  span{
+    padding: 5px 10px;
+    border: solid 1px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+}
+
+.card-product-shipping-type{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.cube-container {
+  height: 100px;
+  top:0;
+  left:50%;
+  margin-left:-50px;
+  margin-top:-50px;
+  perspective: 600px;
+  perspective-origin:50% 50%;
+  position: absolute;
+  width: 100px;
+  filter: brightness(1);
+  transition: all .3s;
+}
+
+.cube {  
+  height: 100%;
+  position: absolute;
+  transform: translateZ(100px);
+  transform-style: preserve-3d;
+  width: 100%;
+  transform: rotateX(-30deg) rotateY(45deg);
+}
+
+.side {
+  height: 98px;
+  position: absolute;
+  width: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.front {
+  transform: translateZ(50px);
+}
+.back {
+  transform: rotateX(180deg) translateZ(50px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
